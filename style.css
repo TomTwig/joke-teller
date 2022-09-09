@@ -48,9 +48,10 @@ width: 800px;
 .joke-button:active{
   transform: scale(0.98);
 }
-joke-button:disabled{
+.joke-button:disabled{
   cursor: default;
   filter: brightness(0.3);
+  transform: scale(1);
 }
 
 @media screen and (max-width:1000px){
@@ -58,10 +59,6 @@ joke-button:disabled{
     width: fit-content;
     align-items: center;
   }
-
-
-
-
   .joke-button{
     box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.1);
     position: unset;

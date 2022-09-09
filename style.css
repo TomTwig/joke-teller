@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -7,29 +7,40 @@ html {
 body{
   padding: 0;
   margin: 0;
-  background-color: green;
+  display: flex;
+  background-color: white;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 100%;
 }
 
 .joke-container{
-  height: 100vh;
-  width: 100vw;
+width: 800px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  background: url(./robot.gif);
-  background-size: contain;
-  background-position:  center;
-  background-repeat: no-repeat;
+  position: relative;
+
 }
 
 .joke-button{
+  position: absolute;
+  background-color: #99CCCC;
   outline: none;
+  right: 5em;
+  bottom: 15em;
   cursor: pointer;
-  padding: 1em;
+  padding: 1em 2em;
   border: none;
   border-radius: 15px;
-  box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1em;
 }
 .joke-button:hover{
   filter: brightness(0.95);
@@ -43,8 +54,19 @@ joke-button:disabled{
 }
 
 @media screen and (max-width:1000px){
+  .joke-container{
+    width: fit-content;
+    align-items: center;
+  }
+
+
+
+
   .joke-button{
-    box-shadow: 5px 5px 30px 20px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.1);
+    position: unset;
+    width: fit-content;
+    
   }
   
 }
